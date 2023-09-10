@@ -3,7 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
-@app.route('/details/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_details():
     slack_name = request.args.get('slack_name')
     track = request.args.get('track')
@@ -15,11 +15,8 @@ def get_details():
 
     return jsonify({'slack_name':slack_name,
     'track':track,
-     'day':day,
-     "utc_time": utc_time,
-     'status_code': 200,
-      "github_repo_url": source_code_URL,
-      "github_file_url": file_URL})
-
-if __name__ == ("__main__"):
-    app.run()
+    'day':day,
+    'utc_time': utc_time,
+    'status_code': 200,
+    'github_repo_url': source_code_URL,
+    'github_file_url': file_URL})
