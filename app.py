@@ -22,4 +22,4 @@ def get_details():
       "github_file_url": file_URL})
 
 if __name__ == ("__main__"):
-    app.run(debug=True)
+    app.run()
