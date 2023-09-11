@@ -3,12 +3,12 @@ import datetime
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def get_details():
     slack_name = request.args.get('slack_name')
     track = request.args.get('track')
-    day = 'Sunday'
-    utc_time = datetime.datetime.now()
+    day = 'Monday'
+    utc_time = datetime.datetime.now().isoformat("T", "milliseconds") + 'Z'
     file_URL = 'https://github.com/sandratoo/hngx/blob/main/hngx.py'
     source_code_URL = 'https://github.com/sandratoo/hngx.git'
     
