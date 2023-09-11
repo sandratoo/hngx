@@ -20,3 +20,6 @@ def get_details():
     'status_code': 200,
     'github_repo_url': source_code_URL,
     'github_file_url': file_URL})
+
+if __name__ == ("__main__"):
+    app.run()
