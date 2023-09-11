@@ -1,5 +1,6 @@
 from flask import Flask,jsonify,request
-import datetime
+from datetime import datetime
+
 
 app = Flask(__name__)
 
